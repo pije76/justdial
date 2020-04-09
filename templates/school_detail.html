@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+   <section id="controller_area">
+      <ul class="row home_location">
+
+         <li class="col-md-12 col-sm-12">
+            <a href="united-kingdom/"><span class="location_country">United Kingdom</span></a> 
+            <ul class="row homeRegions">
+               {% for item in city_list %}
+               <li class="col-md-3 col-sm-4 home_regions"><a href="{{ item.slug }}" class="thestate">{{ item.school_name }}</a></li>
+               {% endfor %}
+            </ul>
+         </li>
+         <div class="clear"></div>
+
+      </ul>
+   </section>
+
+{% endblock %}

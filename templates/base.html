@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>{% block title %}Mustdial - Local Search, Social, News, Videos, Shopping{% endblock %}</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description" content="Mustdial, India's local search engine, provides Best Deals, Shop Online, Ticket Booking for Flights, Hotels, Movies, Buses and Cabs. You can also Order Food, Book Restaurant Table, View Menu, Book Doctors’ Appointments. Mustdial curates Social content, News, Videos & more from Top Publishers on all Trending Topics." />
+	<meta name="keywords" content="Mustdial, local search, travel, order food, grocery, medicines, online shopping, book tickets, movies, bus, flights, hotels, events, search plus services, local businesses, online yellow pages, India trade directory, city yellow pages, indian search engine, Mustdial customer care, customer support" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="yandex-verification" content="84b9fc608ea8a47a" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/navmenu.css' %}" rel="stylesheet" type="text/css">
+	{% block styles %}
+	{% endblock %}
+	<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+	{% block scripts %}
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://Mustdial.com/united-states/california/los-angeles/categories/","name":"Los Angeles, CA","image":"https://Mustdial.com/assets/images/la.jpg"}},{"@type":"ListItem","position":2,"item":{"@id":"https://Mustdial.com/united-states/new-york/new-york/categories/","name":"New York City, NY","image":"https://Mustdial.com/assets/images/ny.jpg"}},{"@type":"ListItem","position":3,"item":{"@id":"https://Mustdial.com/united-states/illinois/chicago/categories/","name":"Chicago, IL","image":"https://Mustdial.com/assets/images/Chicago.jpg"}},{"@type":"ListItem","position":4,"item":{"@id":"https://Mustdial.com/united-states/texas/houston/categories/","name":"Houston, TX","image":"https://Mustdial.com/assets/images/Houston.jpg"}},{"@type":"ListItem","position":5,"item":{"@id":"https://Mustdial.com/united-states/arizona/phoenix/categories/","name":"Phoenix, AZ","image":"https://Mustdial.com/assets/images/Phoenix.jpg"}},{"@type":"ListItem","position":6,"item":{"@id":"https://Mustdial.com/united-states/pennsylvania/philadelphia/categories/","name":"Philadelphia, PA","image":"https://Mustdial.com/assets/images/Philadelphia.jpg"}},{"@type":"ListItem","position":7,"item":{"@id":"https://Mustdial.com/united-states/texas/san-antonio/categories/","name":"San Antonio, TX","image":"https://Mustdial.com/assets/images/San-Antonio.jpg"}},{"@type":"ListItem","position":8,"item":{"@id":"https://Mustdial.com/united-states/california/san-diego-downtown/categories/","name":"San Diego, CA","image":"https://Mustdial.com/assets/images/San-Diego.jpg"}},{"@type":"ListItem","position":9,"item":{"@id":"https://Mustdial.com/united-states/texas/dallas/categories/","name":"Dallas, TX","image":"https://Mustdial.com/assets/images/Dallas.jpg"}},{"@type":"ListItem","position":10,"item":{"@id":"https://Mustdial.com/united-states/california/san-jose/categories/","name":"San Jose, CA","image":"https://Mustdial.com/assets/images/San-Jose.jpg"}}]}
+	</script>
+	{% endblock %}
+</head>
+
+<body>
+	<div id="header">
+		<a class=logo-mobile data-ajax=false data-role=none href="/">
+			<img src="{% static "images/logo.png" %}" alt="Escorts Directory and Independent Backpage Escorts Alternative" title="Escorts Directory and Independent Backpage Escorts Alternative"/>
+		</a>
+		{% if user.is_authenticated %}
+		<a class="right pagebtn m-15" href="/accounts/logout/">Logout</a>
+		{% else %}
+		<a class="right pagebtn m-15" href="/accounts/login/">Login</a>
+		{% endif %}
+	</div>
+
+	{% block content %}
+	{% endblock %}
+
+	<h1>Some description here Some description here</h1>
+	<p class=thecontent>Some description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description here</p>
+
+	<footer>
+		<ul id="navLinkList">
+		<li><a alt="Mustdial.com" href="/" title="Mustdial.com">Home</a>
+		<li><a alt="Contact" href="/contact/" title="Contact">Contact</a>
+		<li><a alt="Privacy" href="/privacy/" title="Privacy">Privacy</a>
+		<li><a alt="Terms" href="/terms/" title="Terms">Terms</a>
+		</ul>
+		<p class="thecontent">
+		Email - <a href="mailto:help.Mustdial@gmail.com">help.Mustdial@gmail.com</a>
+		</p>
+	</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155003065-1"></script>
+<script>window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-155003065-1');</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<section id="controller_area">
+	<ul class="home_location row topcitylist">
+		<li class="col-md-12 col-sm-12">
+			<span class="location_country">Cityxguide Alabama</span>
+			<ul class="homeCity">
+				{% for item in us_region %}
+				<li class="home_city"><a href="{{ item.slug }}/">{{ item.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</li>
+	</ul>
+	<div class="clear"></div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+body{color:#000}
+.ui-bar-a{background-color:#186299!important;padding:.5em 1.143em;font-size:14px;font-weight:700;cursor:default;outline:0;color:#000;text-align:left}
+.ui-listview>li{background-color:#f6f6f6;border-color:#ddd;color:#333;text-shadow:0 0 0 #f3f3f3;font-weight:600}
+.ui-listview>li a{text-align:left;text-decoration:none}
+.ui-bar-a{color:#000!important}
+.ui-li-count{position:absolute;font-size:12.5px;font-weight:700;text-align:center;border-width:1px;border-style:solid;padding:0 .48em;line-height:1.6em;min-height:1.6em;min-width:.64em;right:.8em;top:50%;margin-top:-.88em}
+.ui-body-b,.ui-page-theme-b .ui-body-inherit,html .ui-bar-b .ui-body-inherit,html .ui-body-b .ui-body-inherit,html .ui-panel-page-container-b,html body .ui-group-theme-b .ui-body-inherit{background-color:#000;border-color:#ddd;color:#333;text-shadow:0 1px 0 #f3f3f3}
+.ui-body-b{border-width:1px;border-style:solid}
+.ui-listview .ui-btn-icon-right .ui-li-count{right:3.2em}
+h2.bigPhone{color:#186299;font-size:20px!important;padding:0;margin:5px 0 0!important;text-align:center;text-decoration:underline;background:0 0;font-weight:400}
+.main{text-align:left;font-size:17px;line-height:25px;font-family:sans-serif;padding:1em}
+h1{font-size:20px;color:#ff740e;font-weight:700;font-family:Verdana,Geneva,sans-serif;margin:5px 0 5px 0;padding:0}
+h1 a{color:#ff740e!important}
+#gallery img{max-width:290px;width:100%;clear:both}
+#BioID{margin-top:10px;margin-bottom:10px}
+#stats h2{font-weight:700;color:#ff740e;border-bottom:solid 1px #ccc;font-size:14px;font-family:Verdana,Geneva,sans-serif}
+#stats div span.label{display:inline-block;width:100px;font-weight:700}
+table.slim tr td:first-child{width:75px;font-weight:700;font-size:.8em;padding-right:5px;vertical-align:top;padding-top:4px}
+.imgclass{padding:2px;display:inline-block}
+@media screen and (max-width:500px){
+    #gallery img{width:100%;clear:both;height:auto;max-width:initial}
+    .imgclass{display:block}
+}
+h2.adtitle{overflow: hidden;font-size:20px;color:#ff740e;font-weight:700;font-family:Verdana,Geneva,sans-serif;margin:5px 0 5px 0;padding:0}
+h1.summary{text-align:left;font-size:17px;line-height:25px;font-family:sans-serif;font-weight:600;color:#000}
+#stats h3{font-weight:700;color:#ff740e;border-bottom:solid 1px #ccc;font-size:14px;font-family:Verdana,Geneva,sans-serif}
+.btnwa{background-color:#1db154;color:#000!important;padding:2px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.btnph{background-color:#ed2d70;color:#000!important;padding:2px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.btnms{background-color:#007fff;color:#000!important;padding:2px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+hr{width:100%}
+.thebtnm{float:right;margin-top:-30px;margin-bottom:10px}
+      @media only screen and (max-width:1200px){.thebtnm{float:left;margin-top:0;margin-bottom:5px}}

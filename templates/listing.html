@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block styles %}
+	<link href="{% static 'css/listing.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<div class="inside-container point1 clearfix">
+
+	<div class="row">
+
+		<section id="content" class="col-md-12">			
+			<h1>{% for item in categories %}{{ item.title }}{% endfor %} in {% for item in city_name %}{{ item.name }}{% endfor %}
+				<span class="topbtn">
+					<a style="display:none;" class="pagebtn" >Previous</a>
+					<a class="pagebtn" style="display:none;" >Next</a>
+				</span>
+			</h1>
+
+			<span class="topbtn2">
+				<a style="display:none;" class="pagebtn" >Previous</a>
+				<a class="pagebtn" style="display:none;" >Next</a>
+			</span>
+		</section>
+		<br/>
+
+		<span id="multicity">
+			<ul class="topciylist">
+				{% for city in cities %}
+				<li><a href="{{ city.id }}">{{ city.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</span>
+
+		<br/>
+		<section id="listings" class="grid row">
+
+			{% for item in listing_list %}
+			<div class="cat hasPhoneNumber ribbon-box gallery">
+				<div class="tebboxf">
+					<a class="theimgbox" href="https://harlothub.com/united-states/alabama/auburn/female-escorts/954-274-7542-354973.html">
+						<div class="gallerybox" style="background-image:url('https://images.harlothub.com/images/full/f6bdcf158c51886beca8901b577b5f11.jpg'), url('https://harlothub.com/assets/images/gr.jpg');background-size: cover;"></div>
+					</a>
+				</div>
+
+				<div class="tebboxs">
+					<div class="galleryHeader">
+						<a href="{{ item.slug }}">
+							<h3>{{ item.title }}   - ({{ item.age }})</h3>
+						</a>
+						<p class="thebox">
+							{{ item.location }}<br/><br/>
+							{{ item.description }}<br/><br/>
+							<a class="theimgbox" href="{{ item.photo }}">
+								<img src="{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
+								<img src="{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
+								<img src="{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
+								<img src="{{ MEDIA_URL }}/{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+
+			<div class="clearfix"></div>
+
+		</section>
+
+		<div class='pagination'>
+			<a style="display:none;" class="pagebtn" >Previous</a>
+			<a class="pagebtn" style="display:none;" >Next</a>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<br/>
+		<span id="multicity2">
+			<ul class="topciylist">
+				<li><span>Auburn</span></li>
+				<li><a href="/united-states/alabama/birmingham/female-escorts.html">Birmingham</a></li>
+				<li><a href="/united-states/alabama/dothan/female-escorts.html">Dothan</a></li>
+				<li><a href="/united-states/alabama/gadsden/female-escorts.html">Gadsden</a></li>
+				<li><a href="/united-states/alabama/huntsville/female-escorts.html">Huntsville</a></li>
+				<li><a href="/united-states/alabama/mobile/female-escorts.html">Mobile</a></li>
+				<li><a href="/united-states/alabama/montgomery/female-escorts.html">Montgomery</a></li>
+				<li><a href="/united-states/alabama/muscle-shoals/female-escorts.html">Muscle Shoals</a></li>
+				<li><a href="/united-states/alabama/tuscaloosa/female-escorts.html">Tuscaloosa</a></li>
+			</ul>
+		</span>
+
+		<br/>
+
+		<div class="clearfix"></div>
+
+	</div>
+
+	<div class="faqbox" style="line-height: 25px;">
+		<p>Some description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description here</p>
+		<p>WSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description here</p>
+	</div>
+
+	<div class="faqbox">
+		<p>
+			<h2>Frequently Asked Questions</h2>
+		</p>
+
+		<div itemscope itemtype=https://schema.org/FAQPage>
+
+			<div itemprop=mainEntity itemscope itemtype=https://schema.org/Question>
+				<p>
+					<h3 itemprop=name>1. Some description hereSome description hereSome description here</h3>
+					<div itemprop=acceptedAnswer itemscope itemtype=https://schema.org/Answer>
+						<div itemprop=text>
+							<p>Some description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description here
+							</p>
+						</div>
+					</div>
+				</p>
+			</div>
+
+			<div itemprop=mainEntity itemscope itemtype=https://schema.org/Question>
+				<p>
+					<h3 itemprop=name>2. Some description hereSome description hereSome description hereSome description here?</h3>
+					<div itemprop=acceptedAnswer itemscope itemtype=https://schema.org/Answer>
+						<div itemprop=text>
+							<p>Some description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description here
+							</p>
+						</div>
+					</div>
+				</p>
+			</div>
+
+			<div itemprop=mainEntity itemscope itemtype=https://schema.org/Question>
+				<p>
+					<h3 itemprop=name>3. Some description hereSome description hereSome description hereSome description here?</h3>
+					<div itemprop=acceptedAnswer itemscope itemtype=https://schema.org/Answer>
+						<div itemprop=text>
+							<p>Some description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description here
+							</p>
+						</div>
+					</div>
+				</p>
+			</div>
+
+			<div itemprop=mainEntity itemscope itemtype=https://schema.org/Question>
+				<p>
+					<h3 itemprop=name>4. Some description hereSome description hereSome description hereSome description here?</h3>
+					<div itemprop=acceptedAnswer itemscope itemtype=https://schema.org/Answer>
+						<div itemprop=text>
+							<p>Some description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description hereSome description here
+							</p>
+						</div>
+					</div>
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<footer>
+		<ul id="navLinkList">
+			<li><a alt=harlothub.com href=https://harlothub.com title=harlothub.com>Home</a></li>
+			<li><a alt=Contact href=/contact-us.html title=Contact>Contact</a></li>
+			<li><a alt=Privacy href=/privacy-policy.html title=Privacy>Privacy</a>
+			<li><a alt=Terms href=/terms-of-use.html title=Terms>Terms</a></li>
+		</ul>
+
+		<p class="thecontent">
+			Email - <a href="mailto:help.harlothub@gmail.com">help.harlothub@gmail.com</a>
+		</p>
+	</footer>
+
+{% endblock %}

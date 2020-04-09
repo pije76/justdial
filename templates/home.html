@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+	<section id="controller_area">
+		<ul class="row home_location">
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">United States</span>
+				<ul class="row homeRegions">
+					{% for country in us_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="234/{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<a href="38/"><span class="location_country">Canada</span>
+				<ul class="row homeRegions">
+					{% for country in canada_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">United Kingdom</span>
+				<ul class="row homeRegions">
+					{% for country in uk_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">Australia & Oceania</span>
+				<ul class="row homeRegions">
+					{% for country in australia_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">Africa</span>
+				<ul class="row homeRegions">
+					{% for country in africa_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">Asia & Pacific</span>
+				<ul class="row homeRegions">
+					{% for country in asia_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">Middle East</span>
+				<ul class="row homeRegions">
+					{% for country in middle_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">Europe</span>
+				<ul class="row homeRegions">
+					{% for country in europe_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+			<li class="col-md-12 col-sm-12">
+				<span class="location_country">Latin America & Caribbean</span>
+				<ul class="row homeRegions">
+					{% for country in latin_country %}
+					<li class="col-md-3 col-sm-4 home_regions"><a href="{{ country.id }}" class="thestate">{{ country.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+			<div class="clear"></div>
+
+		</ul>
+	</section>
+
+{% endblock %}

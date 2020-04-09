@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% load account %}
+{% load static %}
+
+{% block styles %}
+		<link href="{% static 'css/account.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+	<div class="row isi">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			{% if user.is_authenticated %}
+			<div id="name_title" class="">
+				<span id="rtr-name_title_0">Name &nbsp; &nbsp; &nbsp;</span>
+			</div>
+			<div id="name_field" class="">
+				<span id="rtr-name_field_0">{{ user.first_name }} {{ user.last_name }} </span>
+			</div>
+			<div id="email_title" class="">
+				<span id="rtr-email_title_0">Email</span>
+			</div>
+			<div id="email_field" class="">
+				<span id="rtr-email_field_0">{{ user.email }}</span>
+			</div>
+			<div id="password_title" class="">
+				<span id="rtr-password_title_0">Password</span>
+			</div>
+			<div id="password_field" class="">
+				<span id="rtr-password_field_0">xxxxxx</span>
+			</div>
+			<div id="changepassword_button" class="">
+				<span id="rtr-changepassword_button_0"><a href="/accounts/password/change/">Change password</a></span>
+			</div>
+			<div id="class_title" class="">
+				<span id="rtr-class_title_0">Class</span>
+			</div>
+			<div id="class_field" class="">
+				<span id="rtr-class_field_0">{{user.user.classof}}</span>
+			</div>
+			<div id="contactadmin" class="">
+				<span id="rtr-contactadmin_0">Contact administrator (email)</span>
+			</div>
+			<div id="contactteacher" class="">
+				<span id="rtr-contactteacher_0">Contact administrator (email teacher)</span>
+			</div>
+			{% endif %}
+
+			<div id="s-Text_12" class="">
+				<span id="rtr-s-Text_12_0">Feeback to Edapt</span>
+			</div>
+
+			<div id="input_feedback" class="">
+				<div class="backgroundLayer"></div>
+				<div class="paddingLayer">
+					<div class="content">
+						<div class="valign">
+							<input type="text" value="" maxlength="100" tabindex="-1" placeholder="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="s-Button_2" class="">
+				<span id="rtr-s-Button_2_0"><a href="/submit/">Send</a></span>
+			</div>
+
+			<div id="s-Title" class="">
+				<div class="icon"></div>
+				<select id="s-Title-options" class="s-6c5b677b-8c09-45c3-b4ac-b730b8f63824 dropdown-options">
+					<option selected="selected" class="option">Error in content</option>
+					<option class="option">Unexpected behaviour</option>
+					<option class="option">Suggestions</option>
+					<option class="option">General feedback</option>
+					<option class="option"></option>
+				</select>
+			</div>
+
+					 <div id="s-Text_13" class="">
+							<span id="rtr-s-Text_13_0">Subject</span>
+					 </div>
+
+			 </div>
+	 </div>
+
+</div>
+{% endblock %}

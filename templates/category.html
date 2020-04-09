@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+{% block styles %}
+	<link href="{% static 'css/category.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+	  <br>
+	  <div class="ui-content" data-role="main">
+		 <ul class="ui-listview" data-count-theme="b" data-divider-theme="a" data-role="listview">
+		 {% for item in city_name %}
+			<li class="ui-bar-a ui-first-child ui-li-divider"data-role="list-divider" role="heading">{{ item.name }}, {{ item.region }} Categories - MustDial</li>
+		 {% endfor %}
+		 </ul>
+		 {% for category in categories %}
+		 <a class="ui-btn ui-btn-icon-right ui-icon-carat-r"data-ajax="false" href="{{ category.slug }}"title="{{ category.title }}">♥ {{ category.title }}</a>
+		 {% endfor %}
+	  </div>
+	  <br><br>
+
+{% endblock %}

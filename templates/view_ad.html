@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+{% block styles %}
+<link href="{% static 'css/detail.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+<br>
+
+<div class="main">
+	{% for item in listing_detail %}
+	<h2 class="adtitle">{{ item.title }}   - <a href="tel:{{ item.phone }}" style="white-space: nowrap;" class="ui-link">{{ item.phone }}</a></h2>
+	<h1 class="summary">{{ item.phone }} | Escort near South College Street Auburn Auburn, Alabama AL 36830 | 354973</h1>
+	<div class="thebtnm">
+		<a target="_blank" rel="nofollow" href="https://wa.me/19542747542?text=Hi%2c%20I%20saw%20your%20ad%20on%20harlothub%2c%20Tatiana%20hermosa%20colombiana%20%20%2c%20I%27d%20like%20to%20meet%20you." class="btnwa">
+			<img src="{% static "images/wa.png" %}" style="width:15px;"> Whatsapp</img>
+		</a>
+		<a target="_blank" rel="nofollow" href="sms:+1954-274-7542" class="btnms">💬 Message</a>
+		<a target="_blank" rel="nofollow" href="tel:+1954-274-7542" class="btnph">📞 Phone</a>
+	</div>
+	<hr/>
+
+	<div id="BioID">
+
+		<div id="gallery">
+			<a href="https://images.harlothub.com/images/full/f6bdcf158c51886beca8901b577b5f11.jpg" target="_blank" class="imgclass">
+				<img src="https://images.harlothub.com/images/full/f6bdcf158c51886beca8901b577b5f11.jpg" alt="Tatiana hermosa colombiana" title="Tatiana hermosa colombiana" onerror="this.style.display='none'">
+			</a>
+			<a href="https://images.harlothub.com/images/full/eee407d90c58b612305f3f8b4983edcf.jpg" target="_blank" class="imgclass">
+				<img src="https://images.harlothub.com/images/full/eee407d90c58b612305f3f8b4983edcf.jpg" alt="Tatiana hermosa colombiana" title="Tatiana hermosa colombiana" onerror="this.style.display='none'">
+			</a>
+			<a href="https://images.harlothub.com/images/full/235be6acba0174ed029352a6075d1b85.jpg" target="_blank" class="imgclass">
+				<img src="https://images.harlothub.com/images/full/235be6acba0174ed029352a6075d1b85.jpg" alt="Tatiana hermosa colombiana" title="Tatiana hermosa colombiana" onerror="this.style.display='none'">
+			</a>
+			<a href="https://images.harlothub.com/images/full/372b3e2aa76728c59ac627dbd437b411.jpg" target="_blank" class="imgclass">
+				<img src="https://images.harlothub.com/images/full/372b3e2aa76728c59ac627dbd437b411.jpg" alt="Tatiana hermosa colombiana" title="Tatiana hermosa colombiana" onerror="this.style.display='none'">
+			</a>
+		</div>
+
+		<div id="stats">
+			<h2 class="title">About</h2>
+			<a name="bio" class="ui-link"></a>
+			<div style="white-space: pre-line;overflow: hidden;">
+				{{ item.description }}
+			</div>
+			<br>
+
+			<h3 class="title">Info/Rates</h3>
+			<table class="slim">
+				<tbody>
+					<tr>
+						<td>Location</td>
+						<td>{{ item.location }}, AL 36830</td>
+					</tr>
+					<tr>
+						<td>Age</td>
+						<td>{{ item.age }} years old</td>
+					</tr>
+				</tbody>
+			</table>
+			<a name="contact" class="ui-link"></a>
+			<h3>Contact</h3>
+			<div>
+				<span class="label">Phone</span>
+				<a href="tel:{{ item.phone }}" class="ui-link">{{ item.phone }}</a>
+			</div>
+		</div>
+
+	</div>
+	{% endfor %}
+</div>
+
+<footer>
+<ul id="navLinkList">
+<li><a alt=harlothub.com href=https://harlothub.com title=harlothub.com>Home</a>
+<li><a alt=Contact href=/contact-us.html title=Contact>Contact</a>
+<li><a alt=Privacy href=/privacy-policy.html title=Privacy>Privacy</a>
+<li><a alt=Terms href=/terms-of-use.html title=Terms>Terms</a>
+<li><a alt="Report Trafficking" href=/trafficking-report.html title="Report Trafficking">Report Trafficking</a>
+<li><a alt="Sesta/Fosta Statement" href=/sesta-fosta.html title="Sesta/Fosta Statement">Sesta/Fosta Statement</a>
+<li><a alt="Refund and Shipping Policies" href=/refund-and-shipping-policies.html title="Refund and Shipping Policies">Refund and Shipping Policies</a>
+<li><a alt=harlothub.com href=https://harlothub.com title="harlothub.com">© 2020 BEDPAGE CLASSIFIEDS GmbH Gotthardstrasse 10 6476 Intschi, Switzerland.</a></li>
+</ul>
+<p class="thecontent">
+Email - <a href="mailto:help.harlothub@gmail.com">help.harlothub@gmail.com</a>
+</p>
+</footer>
+
+{% endblock %}

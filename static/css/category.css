@@ -1,0 +1,7 @@
+.ui-listview>li{background-color:#f6f6f6;border-color:#ddd;color:#fff;text-shadow:0 0 0 #f3f3f3;font-weight:600}
+.ui-btn{font-size:16px;margin:.5em 0;padding:.7em 1em;display:block;position:relative;text-align:center;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.ui-listview>li a{text-align:left;text-decoration:none;background-color:#405e8f;color:#000}
+.ui-bar-a{background-color:#405e8f!important;padding:.5em 1.143em;font-size:18px;font-weight:700;cursor:default;outline:0;color:#000;text-align:left;border:1px solid}
+.ui-li-count{position:absolute;font-size:12.5px;font-weight:700;text-align:center;border-width:1px;border-style:solid;padding:0 .48em;line-height:1.6em;min-height:1.6em;min-width:.64em;right:.8em;top:50%;margin-top:-.88em}
+ul{margin:0;padding:0}
+.ui-content a{color:#000;text-align:left;font-size:18px}
