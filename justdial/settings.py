@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'smart_selects',
     'ajax_select',
     'crispy_forms',
+    'easy_thumbnails',
+    'filer',
     'mptt',
     'django_mptt_admin',
     'parler',
@@ -155,20 +157,26 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-CITIES_LIGHT_TRANSLATION_LANGUAGES = ['fr', 'en']
-CITIES_LIGHT_INCLUDE_COUNTRIES = ['US', 'USA']
-CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3', 'PPLA4', 'PPLC', 'PPLF', 'PPLG', 'PPLL', 'PPLR', 'PPLS', 'STLMT',]
-CITIES_LIGHT_APP_NAME = 'listing'
-MIGRATION_MODULES = {
-    'cities_light': None
-}
-
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+CITIES_LIGHT_TRANSLATION_LANGUAGES = ['fr', 'en']
+#CITIES_LIGHT_INCLUDE_COUNTRIES = ['US', 'ID', 'GB', 'CA', 'AU']
+CITIES_LIGHT_INCLUDE_COUNTRIES = ['US']
+CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3', 'PPLA4', 'PPLC', 'PPLF', 'PPLG', 'PPLL', 'PPLR', 'PPLS', 'STLMT',]
+CITIES_LIGHT_APP_NAME = 'listing'
+MIGRATION_MODULES = {
+    'cities_light': None
+}
+
+AJAX_LOOKUP_CHANNELS = {
+    'cities_light_country': ('listing.lookups', 'CountryLookup'),
+    'cities_light_city': ('listing.lookups', 'CityLookup'),
+}
 
 # Allauth settings
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
@@ -192,11 +200,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #JQUERY_URL = True
 USE_DJANGO_JQUERY = True
 
-
-AJAX_LOOKUP_CHANNELS = {
-    'cities_light_country': ('cities_light.lookups', 'CountryLookup'),
-    'cities_light_city': ('cities_light.lookups', 'CityLookup'),
-}
 
 LOGGING = {
     'version': 1,

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% load thumbnail %}
+
+
+{% block styles %}
+    <link href="{% static 'css/listing.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<div class="inside-container point1 clearfix">
+
+    <div class="row">
+
+        <p>Privacy Policy</p>
+    </div>
+
+    <footer>
+        <ul id="navLinkList">
+            <li><a alt=harlothub.com href=https://harlothub.com title=harlothub.com>Home</a></li>
+            <li><a alt=Contact href=/contact-us.html title=Contact>Contact</a></li>
+            <li><a alt=Privacy href=/privacy-policy.html title=Privacy>Privacy</a>
+            <li><a alt=Terms href=/terms-of-use.html title=Terms>Terms</a></li>
+        </ul>
+
+        <p class="thecontent">
+            Email - <a href="mailto:help.harlothub@gmail.com">help.harlothub@gmail.com</a>
+        </p>
+    </footer>
+
+{% endblock %}

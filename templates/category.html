@@ -11,12 +11,10 @@
 	  <br>
 	  <div class="ui-content" data-role="main">
 		 <ul class="ui-listview" data-count-theme="b" data-divider-theme="a" data-role="listview">
-		 {% for item in city_name %}
-			<li class="ui-bar-a ui-first-child ui-li-divider"data-role="list-divider" role="heading">{{ item.name }}, {{ item.region }} Categories - MustDial</li>
-		 {% endfor %}
+			<li class="ui-bar-a ui-first-child ui-li-divider"data-role="list-divider" role="heading">{{ city_name }}, {{ region_name }} Categories - MustDial</li>
 		 </ul>
 		 {% for category in categories %}
-		 <a class="ui-btn ui-btn-icon-right ui-icon-carat-r"data-ajax="false" href="{{ category.slug }}"title="{{ category.title }}">♥ {{ category.title }}</a>
+		 <a class="ui-btn ui-btn-icon-right ui-icon-carat-r"data-ajax="false" href="{{ category.id }}"title="{{ category.title }}">♥ {{ category.title }}</a>
 		 {% endfor %}
 	  </div>
 	  <br><br>

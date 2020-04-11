@@ -28,7 +28,9 @@ h1{color:#fff;font-family:'Open Sans',sans-serif;background-color:#405e8f;paddin
 .galleryHeader p{color:#000}
 .topbtn2{display:none}
 .topbtn{float:right;margin-right:10px}
+/**
 .pagebtn{border:1px solid #efefef;color:#000;padding-left:10px;padding-right:10px;border:solid 1px silver;background:#e9e9e9;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 1px 3px rgba(0,0,0,.1);font-size:17px!important;font-weight:600;text-decoration:none;color:#717171!important;display:inline-block;font-family:sans-serif;border-radius:3px}
+**/
 .topciylist{list-style-type:none;margin:0;padding:0;overflow:hidden;line-height:25px}
 .topciylist li{margin:0;padding:0 .5em;border-right:1px solid #f14e13;display:inline-block;border-radius:0 10px}
 .topciylist li:last-child{border-right:none}

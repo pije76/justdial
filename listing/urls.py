@@ -10,6 +10,7 @@ from .views import *
 urlpatterns = [
     path('', home, name='home'),
     #   path('united-states/', us_country, name='us_country'),
+    path('privacy/', privacy, name='privacy'),
     re_path(r'^(?P<country_id>[\w-]+)/$', region_list, name='region_list'),
     #   path('canada/', canada_country, name='canada_country'),
     #    path('<slug:slug>/', us_country, name='us_country'),
@@ -30,9 +31,9 @@ urlpatterns = [
     #    re_path(r'^schools/(?P<country_slug>[\w-]+)/$', CountrySchoolList.as_view(), name='country_list'),
     #    re_path(r'^schools/(?P<country_slug>[\w-]+)/(?P<region_slug>[\w-]+)/$', ProvinceSchoolList.as_view(), name='region_list'),
     #    re_path(r'^schools/(?P<country_slug>[\w-]+)/(?P<region_slug>[\w-]+)/(?P<city_slug>[\w-]+)/$', CitySchoolList.as_view(), name='city_list'),
-    re_path(r'^(?P<country_id>[\w-]+)/(?P<region_id>[\w-]+)/(?P<city_slug>[\w-]+)/$', listing_list, name='listing_list'),
-    re_path(r'^(?P<country_id>[\w-]+)/(?P<region_id>[\w-]+)/(?P<city_id>[\w-]+)/(?P<category_slug>[\w-]+)/$', category_list, name='category_list'),
-    re_path(r'^(?P<country_id>[\w-]+)/(?P<region_id>[\w-]+)/(?P<city_id>[\w-]+)/(?P<category_slug>[\w-]+)/(?P<slug>[\w-]+)/$', listing_detail, name='listing_detail'),
+    re_path(r'^(?P<country_slug>[\w-]+)/(?P<region_id>[\w-]+)/(?P<city_id>[\w-]+)/$', listing_list, name='listing_list'),
+    re_path(r'^(?P<country_slug>[\w-]+)/(?P<region_id>[\w-]+)/(?P<city_id>[\w-]+)/(?P<category_id>[\w-]+)/$', category_list, name='category_list'),
+    re_path(r'^(?P<country_slug>[\w-]+)/(?P<region_id>[\w-]+)/(?P<city_slug>[\w-]+)/(?P<category_slug>[\w-]+)/(?P<slug>[\w-]+)/$', listing_detail, name='listing_detail'),
 
     path('category/', category, name='category'),
 ]

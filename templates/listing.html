@@ -2,6 +2,8 @@
 
 {% load static %}
 {% load i18n %}
+{% load thumbnail %}
+
 
 {% block styles %}
 	<link href="{% static 'css/listing.css' %}" rel="stylesheet" type="text/css">
@@ -14,7 +16,7 @@
 	<div class="row">
 
 		<section id="content" class="col-md-12">			
-			<h1>{% for item in categories %}{{ item.title }}{% endfor %} in {% for item in city_name %}{{ item.name }}{% endfor %}
+			<h1>{% for item in categories %}{{ item.title }}{% endfor %} in {{ city_name }}
 				<span class="topbtn">
 					<a style="display:none;" class="pagebtn" >Previous</a>
 					<a class="pagebtn" style="display:none;" >Next</a>
@@ -31,7 +33,9 @@
 		<span id="multicity">
 			<ul class="topciylist">
 				{% for city in cities %}
-				<li><a href="{{ city.id }}">{{ city.name }}</a></li>
+				{% for item in categories %}
+				<li><a href="/{{ city.country.id }}/{{ city.region.id }}/{{ city.id }}/{{ item.id }}">{{ city.name }}</a></li>
+				{% endfor %}
 				{% endfor %}
 			</ul>
 		</span>
@@ -42,8 +46,8 @@
 			{% for item in listing_list %}
 			<div class="cat hasPhoneNumber ribbon-box gallery">
 				<div class="tebboxf">
-					<a class="theimgbox" href="https://harlothub.com/united-states/alabama/auburn/female-escorts/954-274-7542-354973.html">
-						<div class="gallerybox" style="background-image:url('https://images.harlothub.com/images/full/f6bdcf158c51886beca8901b577b5f11.jpg'), url('https://harlothub.com/assets/images/gr.jpg');background-size: cover;"></div>
+					<a class="theimgbox" href="{{ item.slug }}">
+						<div class="gallerybox" style="background-image:url('{% thumbnail item.photofeatured 250x250 crop %}'), url('https://harlothub.com/assets/images/gr.jpg');background-size: cover;"></div>
 					</a>
 				</div>
 
@@ -53,13 +57,12 @@
 							<h3>{{ item.title }}   - ({{ item.age }})</h3>
 						</a>
 						<p class="thebox">
-							{{ item.location }}<br/><br/>
+							{{ item.city }}<br/><br/>
 							{{ item.description }}<br/><br/>
-							<a class="theimgbox" href="{{ item.photo }}">
-								<img src="{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
-								<img src="{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
-								<img src="{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
-								<img src="{{ MEDIA_URL }}/{{ item.photo }}" class="boximg" onerror="this.style.display='none'">
+							<a class="theimgbox" href="/media/{{ item.photo }}">
+								<img src="{% thumbnail item.photo1 250x250 crop %}" class="boximg" onerror="this.style.display='none'">
+								<img src="{% thumbnail item.photo2 250x250 crop %}" class="boximg" onerror="this.style.display='none'">
+								<img src="{% thumbnail item.photo3 250x250 crop %}" class="boximg" onerror="this.style.display='none'">
 							</a>
 						</p>
 					</div>

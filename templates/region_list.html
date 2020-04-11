@@ -12,8 +12,8 @@
 			<span class="location_country">{{ item.name }}</span>
 			{% endfor %}
 			<ul class="homeCity">
-				{% for country in regions %}
-				<li class="home_city"><a href="{{ country.id }}/">{{ country.name }}</a></li>
+				{% for region in regions %}
+				<li class="home_city"><a href="{{ region.id }}/">{{ region.name }}</a></li>
 				{% endfor %}
 			</ul>
 		</li>
